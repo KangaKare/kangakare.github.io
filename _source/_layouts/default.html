@@ -18,30 +18,23 @@
 
   <script src="assets/js/modernizr.foundation.js"></script>
 
+
 </head>
 	<body>
 		
 <!-- Whole Body Div -->
-
+<div class="container" id="header">
 {% include nav.html %}
-
+{% include header.html %}
+</div>
 <!-- Main page content -->
 <div id="wrapper">
-
-<div class="row">
-<div class="twelve columns centered">
 
 
 	{{ content }}	
 
 
-<!-- end wrapper -->	
-</div>
-
-{% include footer.html %}
-
-  <!-- End Whole-Body Div -->
-  </div>
+ 
 </div>
 
   <!-- Included JS Files (Compressed) -->
