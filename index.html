@@ -17,6 +17,10 @@ title: Welcome!
 <script>
 $(window ).scroll(function(){
  var fade_opac = $(window).scrollTop() / ($('#header').height() - 300);
- $('#header').css({'background': 'linear-gradient(rgba(255,255,255,' + fade_opac + '),rgba(255,255,255,' + fade_opac + ')), url(/assets/images/kangaroo-pouch-baby.jpg)', 'background-repeat':'no-repeat','background-size':'contain'});
+ $('#header').css({'background': 'linear-gradient(rgba(255,255,255,' + fade_opac + '),rgba(255,255,255,' + fade_opac + ')), url(assets/css/images/kangaroo-pouch-baby.jpg)', 'background-repeat':'no-repeat','background-size':'contain'});
+ 
+ var appear_opc = 0;
+ $('#body').css({'background': 'linear-gradient(rgba(255,255,255,' + fade_opac + '),rgba(255,255,255,' + appear_opac + ')), url(assets/css/images/kanga-kare-pouch.jpg)', 'background-repeat':'no-repeat','background-size':'contain'});
+ 
 });
 </script>
