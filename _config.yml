@@ -3,5 +3,5 @@ author:      Leonard Kiyoshi Bogdonoff
 linkedin:    http://www.linkedin.com/pub/leonard-bogdonoff/25/14b/8a6
 twitter:     kangakare
 github:      kangakare
-source:      ./_source
+source:      .
 destination: ./_site
