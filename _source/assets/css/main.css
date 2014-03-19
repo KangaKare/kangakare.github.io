@@ -1,0 +1,23 @@
+/* Nav */
+
+#nav {
+  display:block;
+	margin-top: 2.5em;
+	width: 100%;
+	text-align: center;
+}
+#nav > ul {
+  display: inline-block;
+	border-radius: 0.35em;
+	box-shadow: 0px 0px 1px 1px rgba(15, 15, 15, 0.25) inset;
+	padding: 0px 1.5em;
+	margin-bottom: 2em;
+	list-style: none;
+	
+}
+#nav > ul > li {
+  display: inline-block;
+	padding: 0px 1.5em;
+	line-height: 60px;
+	vertical-align: baseline;
+}

@@ -55,6 +55,9 @@ a:visited { color: #a0a; }
 /*
 /*****************************************************************************/
 
+.top-bar {
+  background: white;
+}
 .site {
   font-size: 115%;
   text-align: justify;
