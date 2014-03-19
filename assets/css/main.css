@@ -7,7 +7,7 @@
 	left: 0px;
 	width: 100%;
 	height: 800px;
-	background: linear-gradient(rgba(255,255,255,0),rgba(255,255,255,0)), 'assets/images/kangaroo-pouch-baby.jpg';
+	background: linear-gradient(rgba(255,255,255,0),rgba(255,255,255,0)), url('assets/images/kangaroo-pouch-baby.jpg');
 	background-repeat: no-repeat;
 	background-size: contain;
 	overflow-y: scroll;
@@ -62,7 +62,7 @@
 	left: 0px;
 	width: 100%;
 	height: 800px;
-	background: linear-gradient(rgba(255,255,255,1),rgba(255,255,255,1)), 'assets/images/kanga-kare-pouch.jpg');
+	background: linear-gradient(rgba(255,255,255,1),rgba(255,255,255,1)), url('assets/images/kanga-kare-pouch.jpg');
 	background-repeat: no-repeat;
 	background-size: contain;
 	overflow-y: scroll;
