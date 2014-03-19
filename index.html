@@ -3,7 +3,7 @@ layout: default
 title: Welcome!
 ---
 <div class="row" id="transition">
-  <h2>Introducing...</h2>
+  <h2>Space for something...</h2>
 </div>
 <div class="container" id="body">
   <div class="row" id="description">
@@ -16,7 +16,7 @@ title: Welcome!
 
 <script>
 $(window ).scroll(function(){
- var opac = $(window).scrollTop() / ($('#header').height() - 300);
- $('#header').css({'background': 'linear-gradient(rgba(255,255,255,' + opac + '),rgba(255,255,255,' + opac + ')), url(/assets/images/kangaroo-pouch-baby.jpg)', 'background-repeat':'no-repeat','background-size':'contain'});
+ var fade_opac = $(window).scrollTop() / ($('#header').height() - 300);
+ $('#header').css({'background': 'linear-gradient(rgba(255,255,255,' + fade_opac + '),rgba(255,255,255,' + fade_opac + ')), url(/assets/images/kangaroo-pouch-baby.jpg)', 'background-repeat':'no-repeat','background-size':'contain'});
 });
 </script>
