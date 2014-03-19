@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Welcome!
+title: 
 ---
 <div class="row" id="transition">
   <h2>Space for something...</h2>
@@ -16,11 +16,16 @@ title: Welcome!
 
 <script>
 $(window ).scroll(function(){
- var fade_opac = $(window).scrollTop() / ($('#header').height() - 300);
- $('#header').css({'background': 'linear-gradient(rgba(255,255,255,' + fade_opac + '),rgba(255,255,255,' + fade_opac + ')), url(assets/css/images/kangaroo-pouch-baby.jpg)', 'background-repeat':'no-repeat','background-size':'contain'});
+  var fade_opac = $(window).scrollTop() / ($('#header').height() - 300);
+  $('#header').css({'background': 'linear-gradient(rgba(255,255,255,' + fade_opac + '),rgba(255,255,255,' + fade_opac + ')), url(assets/css/images/kangaroo-pouch-baby.jpg)', 'background-repeat':'no-repeat','background-size':'contain'});
  
- var appear_opc = 0;
- $('#body').css({'background': 'linear-gradient(rgba(255,255,255,' + fade_opac + '),rgba(255,255,255,' + appear_opac + ')), url(assets/css/images/kanga-kare-pouch.JPG)', 'background-repeat':'no-repeat','background-size':'contain'});
+  var current_scroll = $('#body').offset().top - $(window).scrollTop();
+  if (current_scroll < 700 ) 
+    var fadein_opac = 1.5 - (Math.pow($(window).scrollTop(),4)) / (Math.pow(($('#body').offset().top - 150),4) );
+
+	else
+    var fadein_opac = fade_opac		
+  $('#body').css({'background': 'linear-gradient(rgba(255,255,255,' + fadein_opac + '),rgba(255,255,255,' + fadein_opac + ')), url(assets/css/images/kanga-kare-pouch.JPG)', 'background-repeat':'no-repeat','background-size':'contain'});
  
 });
 </script>
