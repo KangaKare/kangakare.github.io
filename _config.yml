@@ -5,3 +5,4 @@ twitter:     kangakare
 github:      kangakare
 source:      .
 destination: ./_site
+baseurl: kanga_kare
