@@ -1,4 +1,20 @@
+/* Fonts */
+@font-face {
+    font-family: 'district_pro_thin';
+    src: url('fonts/distproth.eot');
+    src: url('fonts/distproth.eot?#iefix') format('embedded-opentype'),
+         url('fonts/distproth.woff') format('woff'),
+         url('fonts/distproth.ttf') format('truetype'),
+         url('fonts/distproth.svg#district_prothin') format('svg');
+    font-weight: normal;
+    font-style: normal;
 
+}
+/* Universal */
+
+body {
+  font-family: 'district_pro_thin';
+}
 /* Header */
 
 #header {
@@ -10,7 +26,6 @@
 	background: linear-gradient(rgba(255,255,255,0),rgba(255,255,255,0)), url('images/kangaroo-pouch-baby.jpg');
 	background-repeat: no-repeat;
 	background-size: contain;
-	overflow-y: scroll;
 	padding: 1rem;
 }
 #logo {
@@ -36,6 +51,7 @@
 	padding: 0px 1.5em;
 	margin-bottom: 2em;
 	list-style: none;
+	font-size: 1.25em;
 	
 }
 #nav > ul > li {
@@ -52,9 +68,15 @@
 
 /* Body Front Page */
 
-#transition {
-  margin-top: 150px;
+.transition {
+  margin-top: 50px;
   height: 300px;
+}
+.transition h2{
+  margin-top: 2em;
+}
+.transition img {
+  height: 265px;
 }
 #body {
   text-align: center;
@@ -62,16 +84,12 @@
 	left: 0px;
 	width: 100%;
 	height: 800px;
-	background: linear-gradient(rgba(255,255,255,1),rgba(255,255,255,1)), url('images/kanga-kare-pouch.JPG');
+	background: linear-gradient(rgba(255,255,255,1),rgba(255,255,255,1)), url('images/ppl-thailand.JPG');
 	background-repeat: no-repeat;
 	background-size: contain;
-	overflow-y: scroll;
 	padding: 1rem;
 	color: white;
 }
-#description {
-  padding-top: 250px;
-}
-#body h1 {
+#description h2{
   color: white;
 }
