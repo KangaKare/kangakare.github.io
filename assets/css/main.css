@@ -70,18 +70,25 @@ body {
 
 .transition {
   margin-top: 50px;
-  height: 300px;
+	margin-bottom: 50px;
 }
 .transition h2{
-  margin-top: 2em;
+  margin-top: 1em;
+	text-align: center;
+}
+.transition p {
+  font-size: 1.25em;
+	text-align: center;
 }
 .transition img {
   height: 265px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 265px;
+	display: block;
 }
 #body {
   text-align: center;
-	top: 0px;
-	left: 0px;
 	width: 100%;
 	height: 800px;
 	background: linear-gradient(rgba(255,255,255,1),rgba(255,255,255,1)), url('images/ppl-thailand.jpg');
@@ -89,6 +96,8 @@ body {
 	background-size: contain;
 	padding: 1rem;
 	color: white;
+	clear: both;
+	margin-top: 25px;
 }
 #description h2{
   color: white;
