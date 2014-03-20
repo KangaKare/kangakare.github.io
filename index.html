@@ -26,7 +26,7 @@ title:
 <script>
 $(window ).scroll(function(){
   var fade_opac = $(window).scrollTop() / ($('#header').height() - 300);
-  $('#header').css({'background': 'linear-gradient(rgba(255,255,255,' + fade_opac + '),rgba(255,255,255,' + fade_opac + ')), url(assets/css/images/kangaroo-pouch-baby.jpg)', 'background-repeat':'no-repeat','background-size':'contain'});
+  $('#header').css({'background': 'linear-gradient(rgba(56,159,217,' + fade_opac + '),rgba(56,159,217,' + fade_opac + ')), url(assets/css/images/kangaroo-pouch-baby.jpg)', 'background-repeat':'no-repeat','background-size':'contain'});
  
   var current_scroll = $('#body').offset().top - $(window).scrollTop();
   if (current_scroll < 700 ) 
@@ -34,7 +34,7 @@ $(window ).scroll(function(){
 
 	else
     var fadein_opac = fade_opac		
-  $('#body').css({'background': 'linear-gradient(rgba(255,255,255,' + fadein_opac + '),rgba(255,255,255,' + fadein_opac + ')), url(assets/css/images/ppl-thailand.jpg)', 'background-repeat':'no-repeat','background-size':'contain'});
- 
+  $('#body').css({'background': 'linear-gradient(rgba(56,159,217,' + fadein_opac + '),rgba(56,159,217,' + fadein_opac + ')), url(assets/css/images/ppl-thailand.jpg)', 'background-repeat':'no-repeat','background-size':'contain'});
+  $('#description h2').css({'color': 'rgba(255, 255, 255,' + (1-fadein_opac) + ')'});
 });
 </script>

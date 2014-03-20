@@ -14,6 +14,8 @@
 
 body {
   font-family: 'district_pro_thin';
+	color: white;
+	background-color: rgb(56, 159, 217);
 }
 /* Header */
 
@@ -23,10 +25,9 @@ body {
 	left: 0px;
 	width: 100%;
 	height: 800px;
-	background: linear-gradient(rgba(255,255,255,0),rgba(255,255,255,0)), url('images/kangaroo-pouch-baby.jpg');
+	background: linear-gradient(rgba(56,159,217,0),rgba(56,159,217,0)), url('images/kangaroo-pouch-baby.jpg');
 	background-repeat: no-repeat;
 	background-size: contain;
-	padding: 1rem;
 }
 #logo {
   margin-top: 100px;
@@ -42,6 +43,7 @@ body {
   display:block;
 	width: 100%;
 	text-align: center;
+	
 }
 #nav > ul {
 	margin-top: 2.5em;
@@ -65,7 +67,11 @@ body {
 #nav > ul > li a {
   color: white;
 }
+#center-nav img {
+  height: 80px;
+	width: 80px;
 
+}
 /* Body Front Page */
 
 .transition {
@@ -75,6 +81,7 @@ body {
 .transition h2{
   margin-top: 1em;
 	text-align: center;
+	color: white;
 }
 .transition p {
   font-size: 1.25em;
@@ -86,19 +93,18 @@ body {
 	margin-right: auto;
 	width: 265px;
 	display: block;
+	border-radius: 999px;
 }
 #body {
   text-align: center;
 	width: 100%;
 	height: 800px;
-	background: linear-gradient(rgba(255,255,255,1),rgba(255,255,255,1)), url('images/ppl-thailand.jpg');
+	background: linear-gradient(rgba(56,159,217,0),rgba(56,159,217,0)), url('images/ppl-thailand.jpg');
 	background-repeat: no-repeat;
 	background-size: contain;
-	padding: 1rem;
-	color: white;
 	clear: both;
 	margin-top: 25px;
 }
 #description h2{
-  color: white;
+  color: rgba(255, 255, 255, 0);
 }
