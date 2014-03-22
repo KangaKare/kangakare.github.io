@@ -2,6 +2,10 @@
 layout: default
 title: 
 ---
+<div class="container" id="header">
+{% include nav.html %}
+{% include header.html %}
+</div>
 <div class="row transition">
   <div class="large-6 columns">
 	  <img src="assets/css/images/pouch-itself.jpg" alt="kanga-kare-pouch"/>
@@ -18,7 +22,7 @@ title:
 <div class="container" id="body">
   <div class="row" id="description">
     <div class="small-6 small-centered columns">
-			<h2 class="byline">Follow our journey across the world</h2>
+			<h2 class="byline"><span class="emphasize">F</span>ollow our journey across the world</h2>
 		</div>
 	</div>
 </div>
@@ -26,7 +30,7 @@ title:
 <script>
 $(window ).scroll(function(){
   var fade_opac = $(window).scrollTop() / ($('#header').height() - 300);
-  $('#header').css({'background': 'linear-gradient(rgba(56,159,217,' + fade_opac + '),rgba(56,159,217,' + fade_opac + ')), url(assets/css/images/kangaroo-pouch-baby.jpg)', 'background-repeat':'no-repeat','background-size':'contain'});
+  $('#header').css({'background': 'linear-gradient(rgba(56,159,217,' + fade_opac + '),rgba(56,159,217,' + fade_opac + ')), url(assets/css/images/kangaroo-joey-in-pouch.jpg)', 'background-repeat':'no-repeat','background-size':'contain'});
  
   var current_scroll = $('#body').offset().top - $(window).scrollTop();
   if (current_scroll < 700 ) 
