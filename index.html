@@ -10,12 +10,11 @@ title:
   <div class="large-6 columns">
 	  <img src="assets/css/images/pouch-itself.jpg" alt="kanga-kare-pouch"/>
     <h2>We created a way to save 15 million lives</h2>
-		<p>Lorem ipsum dolor sit amet consectetur et sed adipiscing elit. Curabitur vel sem sit dolor neque semper magna. Lorem ipsum dolor sit amet consectetur et sed adipiscing elit. Curabitur vel sem sit.</p>
-</div>
+  </div>
   <div class="large-6 columns">
 	  <img src="assets/css/images/mom-kangaroo-and-joey.jpg" alt="kanga-kare-pouch"/>
     <h2>By strengthening the bond between mother and child</h2>
-		<p>Lorem ipsum dolor sit amet consectetur et sed adipiscing elit. Curabitur vel sem sit dolor neque semper magna. Lorem ipsum dolor sit amet consectetur et sed adipiscing elit. Curabitur vel sem sit.</p>
+	</div>
 </div>
 
 </div>
@@ -28,6 +27,7 @@ title:
 </div>
 
 <script>
+if (screen.width > 480) {
 $(window ).scroll(function(){
   var fade_opac = $(window).scrollTop() / ($('#header').height() - 300);
   $('#header').css({'background': 'linear-gradient(rgba(56,159,217,' + fade_opac + '),rgba(56,159,217,' + fade_opac + ')), url(assets/css/images/kangaroo-joey-in-pouch.jpg)', 'background-repeat':'no-repeat','background-size':'contain'});
@@ -41,4 +41,5 @@ $(window ).scroll(function(){
   $('#body').css({'background': 'linear-gradient(rgba(56,159,217,' + fadein_opac + '),rgba(56,159,217,' + fadein_opac + ')), url(assets/css/images/ppl-thailand.jpg)', 'background-repeat':'no-repeat','background-size':'contain'});
   $('#description h2').css({'color': 'rgba(255, 255, 255,' + (1-fadein_opac) + ')'});
 });
+}
 </script>
