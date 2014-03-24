@@ -2,7 +2,7 @@
 layout: default
 title: 
 ---
-<div class="container" id="header">
+<div class="container header" id="index-header">
 {% include nav.html %}
 {% include header.html %}
 </div>
@@ -25,7 +25,9 @@ title:
 		</div>
 	</div>
 </div>
-
+<div id="index-footer">
+  {% include footer.html %}
+</div>
 <script>
 if (screen.width > 480) {
 $(window ).scroll(function(){
