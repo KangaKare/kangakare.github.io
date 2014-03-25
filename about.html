@@ -1,0 +1,127 @@
+---
+layout: default
+title: ' | Who We Are'
+---
+
+<div id="about-us">
+	<div class="container header" id="about-header">
+		{% include nav.html %}
+		<div class="row" id="logo">
+			<div class="small-6 small-centered columns">
+			<h1><span class="emphasize">T</span>ext in Header</h1>
+			</div>
+		</div>
+	</div>
+	
+	<div class="container body">
+	  <div class="row">
+		  <div class="small-6 large-5 columns">
+			  <div class="row">
+				  <div class="large-6 columns">
+						<img src='http://placehold.it/130x150'>
+						<h2> Team role</h2>
+						<p>
+							Gravida dis placerat lectus ante vel nunc euismod eget ornare varius gravida euismod lorem ipsum dolor sit amet consequat		 
+						</p>
+					</div>
+					<div class="large-6 columns lowered">
+						<img src='http://placehold.it/130x150'>
+						<h2> Team role</h2>
+						<p>
+							Gravida dis placerat lectus ante vel nunc euismod eget ornare varius gravida euismod lorem ipsum dolor sit amet consequat
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="small-6 large-5 columns">
+			<div class="row">
+				  <div class="large-6 columns">
+						<img src='http://placehold.it/130x150'>
+						<h2> Team role</h2>
+						<p>
+							Gravida dis placerat lectus ante vel nunc euismod eget ornare varius gravida euismod lorem ipsum dolor sit amet consequat		 
+						</p>
+					</div>
+					<div class="large-6 columns lowered">
+						<img src='http://placehold.it/130x150'>
+						<h2> Team role</h2>
+						<p>
+							Gravida dis placerat lectus ante vel nunc euismod eget ornare varius gravida euismod lorem ipsum dolor sit amet consequat
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="large-2 columns">
+			<div class="row">
+				  <div class="large-12 small-6 columns">
+						<img src='http://placehold.it/130x150'>
+						<h2> Team role</h2>
+						<p>
+							Gravida dis placerat lectus ante vel nunc euismod eget ornare varius gravida euismod lorem ipsum dolor sit amet consequat		 
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+		  <div class="small-6 large-2 large-offset-1 columns">
+			  <img src='http://placehold.it/130x150'>
+				<h2> Team role</h2>
+				<p>
+					Gravida dis placerat lectus ante vel nunc euismod eget ornare varius gravida euismod lorem ipsum dolor sit amet consequat		 
+				</p>
+			</div>
+			<div class="small-6 large-2 columns lowered">
+			  <img src='http://placehold.it/130x150'>
+				<h2> Team role</h2>
+				<p>
+					Gravida dis placerat lectus ante vel nunc euismod eget ornare varius gravida euismod lorem ipsum dolor sit amet consequat		 
+				</p>
+		  </div>
+			<div class="small-6 large-2 columns">
+			  <img src='http://placehold.it/130x150'>
+				<h2> Team role</h2>
+				<p>
+					Gravida dis placerat lectus ante vel nunc euismod eget ornare varius gravida euismod lorem ipsum dolor sit amet consequat		 
+				</p>
+		  </div>
+			<div class="small-6 large-2 columns lowered">
+			  <img src='http://placehold.it/130x150'>
+				<h2> Team role</h2>
+				<p>
+					Gravida dis placerat lectus ante vel nunc euismod eget ornare varius gravida euismod lorem ipsum dolor sit amet consequat		 
+				</p>
+		  </div>
+			<div class="small-6 large-2 columns end">
+			  <img src='http://placehold.it/130x150'>
+				<h2> Team role</h2>
+				<p>
+					Gravida dis placerat lectus ante vel nunc euismod eget ornare varius gravida euismod lorem ipsum dolor sit amet consequat		 
+				</p>
+		  </div>
+		</div>
+	</div>
+
+	
+</div>
+<div id="about-footer">
+  {% include footer.html %}
+</div>
+
+<script>
+if (screen.width > 480) {
+$(window ).scroll(function(){
+  var fade_opac = $(window).scrollTop() / ($('.header').height() - 300);
+  $('.header').css({'background': 'linear-gradient(rgba(56,159,217,' + fade_opac + '),rgba(56,159,217,' + fade_opac + ')), url(http://placehold.it/2000x800)', 'background-repeat':'no-repeat','background-size':'cover', 'background-position': 'center'});
+ 
+  var current_scroll = $('#body').offset().top - $(window).scrollTop();
+  if (current_scroll < 700 ) 
+    var fadein_opac = 1.5 - (Math.pow($(window).scrollTop(),4)) / (Math.pow(($('#body').offset().top - 150),4) );
+
+	else
+    var fadein_opac = fade_opac		
+  $('#body').css({'background': 'linear-gradient(rgba(56,159,217,' + fadein_opac + '),rgba(56,159,217,' + fadein_opac + ')), url(assets/css/images/ppl-thailand.jpg)', 'background-repeat':'no-repeat','background-size':'cover', 'background-position': 'center'});
+  $('#description h2').css({'color': 'rgba(255, 255, 255,' + (1-fadein_opac) + ')'});
+});
+}
+</script>
