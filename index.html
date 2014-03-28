@@ -31,8 +31,8 @@ title:
 <script>
 if (screen.width > 480) {
 $(window ).scroll(function(){
-  var fade_opac = $(window).scrollTop() / ($('#header').height() - 300);
-  $('#header').css({'background': 'linear-gradient(rgba(56,159,217,' + fade_opac + '),rgba(56,159,217,' + fade_opac + ')), url(assets/css/images/kangaroo-joey-in-pouch.jpg)', 'background-repeat':'no-repeat','background-size':'contain'});
+  var fade_opac = $(window).scrollTop() / ($('#index-header').height() - 300);
+  $('#index-header').css({'background': 'linear-gradient(rgba(56,159,217,' + fade_opac + '),rgba(56,159,217,' + fade_opac + ')), url(assets/css/images/kangaroo-joey-in-pouch.jpg)', 'background-repeat':'no-repeat','background-size':'cover'});
  
   var current_scroll = $('#body').offset().top - $(window).scrollTop();
   if (current_scroll < 700 ) 
@@ -40,7 +40,7 @@ $(window ).scroll(function(){
 
 	else
     var fadein_opac = fade_opac		
-  $('#body').css({'background': 'linear-gradient(rgba(56,159,217,' + fadein_opac + '),rgba(56,159,217,' + fadein_opac + ')), url(assets/css/images/ppl-thailand.jpg)', 'background-repeat':'no-repeat','background-size':'contain'});
+  $('#body').css({'background': 'linear-gradient(rgba(56,159,217,' + fadein_opac + '),rgba(56,159,217,' + fadein_opac + ')), url(assets/css/images/ppl-thailand.jpg)', 'background-repeat':'no-repeat','background-size':'cover'});
   $('#description h2').css({'color': 'rgba(255, 255, 255,' + (1-fadein_opac) + ')'});
 });
 }
