@@ -40,27 +40,32 @@ title:
   </div>
 </div>
 <script>
-  var parallax = document.getElementsByClassName("parallax-image");
-  for (var i=0; i<parallax.length -1 ; i++) {
-    var image = parallax[i];
-    makeParallax(image);
-  }
-  function makeParallax(element) {
-    var backHeight = element.dataset.backgroundheight;
-    var backWidth = element.dataset.backgroundwidth;
-    var imageY = element.offsetTop;
-    var elementHeight = element.offsetHeight;
-    var navHeight = 54;
-    window.onscroll = function() {
-      var imagePosition;
-      var scrollY = window.scrollY;
-      var screenHeight = window.screen.height;
-      if (scrollY > (imageY - screenHeight) &&
-          scrollY < (imageY + elementHeight)) {
-        var backgroundRange = (backHeight * window.innerWidth/backWidth);
-        var percentage = (scrollY - imageY - navHeight)/screenHeight;
-        imagePosition = backgroundRange * percentage; 
-        element.style.backgroundPosition = "center " + imagePosition + "px";
+  var parallaxImages = document.getElementsByClassName("parallax-image");
+  window.onscroll = makeParallax(Array.prototype.slice.call(parallaxImages));
+  function makeParallax(elements) {
+    var functions = [];
+    elements.forEach(function(element, index, arr) { 
+      functions.push(function() {
+        var backHeight = element.dataset.backgroundheight;
+        var backWidth = element.dataset.backgroundwidth;
+        var imageY = element.offsetTop;
+        var elementHeight = element.offsetHeight;
+        var navHeight = 54;
+        var imagePosition;
+        var scrollY = window.scrollY;
+        var screenHeight = window.screen.height;
+        if (scrollY > (imageY - screenHeight) &&
+            scrollY < (imageY + elementHeight)) {
+          var backgroundRange = (backHeight * window.innerWidth/backWidth);
+          var percentage = (scrollY - imageY - navHeight)/screenHeight;
+          imagePosition = backgroundRange * percentage; 
+          element.style.backgroundPosition = "center " + imagePosition + "px";
+        }
+      });
+    });
+    return function() {
+      for (var i=0; i<functions.length; i++) {
+        functions[i]();
       }
     }
   }
