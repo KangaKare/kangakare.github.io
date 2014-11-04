@@ -56,7 +56,7 @@ title:
         var screenHeight = window.screen.height;
         if (scrollY > (imageY - screenHeight) &&
             scrollY < (imageY + elementHeight)) {
-          var backgroundRange = (backHeight * window.innerWidth/backWidth);
+          var backgroundRange = (backHeight * window.innerWidth/backWidth) - elementHeight;
           var percentage = (scrollY - imageY - navHeight)/screenHeight;
           imagePosition = backgroundRange * percentage; 
           element.style.backgroundPosition = "center " + imagePosition + "px";
