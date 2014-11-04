@@ -10,7 +10,10 @@ title:
         <h1>Our Global Network</h1>
         <img src="http://placehold.it/1200x500/78BEE5/ffffff" />
       </div>
-      <div class="parallax-image">
+      <div class="parallax-image" 
+           id="image1" 
+           data-backgroundheight="861" 
+           data-backgroundwidth = "1563">
       </div>
       <div id="donate" class="row">
         <div class="large-6 large-offset-3 columns">
@@ -20,7 +23,10 @@ title:
           </div>
         </div>
       </div>
-      <div class="parallax-image">
+      <div class="parallax-image" 
+           id="image2" 
+           data-backgroundheight="861" 
+           data-backgroundwidth = "1563">
       </div>
       <div id="careers" class="row">
         <div class="large-6 large-offset-3 columns">
@@ -33,4 +39,30 @@ title:
     </div>
   </div>
 </div>
+<script>
+  var parallax = document.getElementsByClassName("parallax-image");
+  for (var i=0; i<parallax.length -1 ; i++) {
+    var image = parallax[i];
+    makeParallax(image);
+  }
+  function makeParallax(element) {
+    var backHeight = element.dataset.backgroundheight;
+    var backWidth = element.dataset.backgroundwidth;
+    var imageY = element.offsetTop;
+    var elementHeight = element.offsetHeight;
+    var navHeight = 54;
+    window.onscroll = function() {
+      var imagePosition;
+      var scrollY = window.scrollY;
+      var screenHeight = window.screen.height;
+      if (scrollY > (imageY - screenHeight) &&
+          scrollY < (imageY + elementHeight)) {
+        var backgroundRange = (backHeight * window.innerWidth/backWidth);
+        var percentage = (scrollY - imageY - navHeight)/screenHeight;
+        imagePosition = backgroundRange * percentage; 
+        element.style.backgroundPosition = "center " + imagePosition + "px";
+      }
+    }
+  }
+</script>
 
