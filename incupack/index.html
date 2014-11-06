@@ -25,5 +25,30 @@ title:
     </div>
   </div>
 </div>
+<script>
+  
+  window.onscroll = function() {
+    var element = document.getElementById("kangaroo-care");
+    var elementHeight = element.offsetHeight;
+    var navHeight = 54;
+    var elementY = element.offsetTop ;
+    var scrollY = window.scrollY;
+    var screenHeight = window.screen.height;
+    if (scrollY > ( elementY - elementHeight) && scrollY < (elementY + elementHeight)) {
+      var percentage = (scrollY - elementY)/(elementHeight - 50);
+      element.style.opacity = 1 - percentage;
+    }
+    var element = document.getElementById("experience-kmc");
+    var elementHeight = element.offsetHeight;
+    var navHeight = 54;
+    var elementY = element.offsetTop;
+    var scrollY = window.scrollY;
+    var screenHeight = window.screen.height;
+    if (scrollY > ( elementY - elementHeight) && scrollY < (elementY + elementHeight)) {
+      var percentage = (elementY - scrollY)/(elementHeight);
+      element.style.opacity = 1 - percentage;
+    }
+  }
+</script>
 
 
