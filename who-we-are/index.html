@@ -15,27 +15,42 @@ title:
       <div id="our-team" class="our-team">
         <h1>Our Team</h1>
         <div class="row">
-          <div class="large-6 small-12 columns">
+          <div class="person person1 large-6 small-12 columns">
             <img class="center" src="http://placehold.it/300"></img>
             <h2>Team Role</h2>
             <p>Gravida dis placerat lectus ante vel nunc euismod eget ornare varius gravida euismod lorem ipsum dolor sit amet consequat </p>
+            <div class="person-description">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut felis augue. Curabitur at finibus lorem. Nullam tellus neque, porta non odio et, cursus sollicitudin ex. Curabitur in elementum velit, interdum euismod velit. Donec bibendum condimentum eros, ornare convallis ante consectetur sed. Nunc eu mauris tincidunt, auctor arcu faucibus, semper purus. Ut nec orci accumsan, facilisis magna eget, accumsan ipsum. Nullam pretium velit turpis, et interdum elit lacinia ut. Donec volutpat turpis sit amet sodales tristique. Cras aliquam mauris tempus dolor hendrerit, aliquet aliquam augue elementum. Vestibulum dignissim dapibus ex, non tempus nulla suscipit vel. Ut quis nulla vestibulum, elementum sem id, ornare orci.</p> 
+            </div>
           </div>
-          <div class="large-6 small-12 columns">
+          <div class="person person2 large-6 small-12 columns">
             <img class="center" src="http://placehold.it/300"></img>
             <h2>Team Role</h2>
             <p>Gravida dis placerat lectus ante vel nunc euismod eget ornare varius gravida euismod lorem ipsum dolor sit amet consequat </p>
+            <div class="person-description">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut felis augue. Curabitur at finibus lorem. Nullam tellus neque, porta non odio et, cursus sollicitudin ex. Curabitur in elementum velit, interdum euismod velit.</p>
+              <p>Donec bibendum condimentum eros, ornare convallis ante consectetur sed. Nunc eu mauris tincidunt, auctor arcu faucibus, semper purus. Ut nec orci accumsan, facilisis magna eget, accumsan ipsum. Nullam pretium velit turpis, et interdum elit lacinia ut. Donec volutpat turpis sit amet sodales tristique. Cras aliquam mauris tempus dolor hendrerit, aliquet aliquam augue elementum. Vestibulum dignissim dapibus ex, non tempus nulla suscipit vel. Ut quis nulla vestibulum, elementum sem id, ornare orci.</p> 
+            </div>
           </div>
         </div>
         <div class="row">
-          <div class="large-6 small-12 columns">
+          <div class="person person3 large-6 small-12 columns">
             <img class="center" src="http://placehold.it/300"></img>
             <h2>Team Role</h2>
             <p>Gravida dis placerat lectus ante vel nunc euismod eget ornare varius gravida euismod lorem ipsum dolor sit amet consequat </p>
+            <div class="person-description">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut felis augue. Curabitur at finibus lorem. Nullam tellus neque, porta non odio et, cursus sollicitudin ex. Curabitur in elementum velit, interdum euismod velit.</p>
+              <p>Donec bibendum condimentum eros, ornare convallis ante consectetur sed. Nunc eu mauris tincidunt, auctor arcu faucibus, semper purus. Ut nec orci accumsan, facilisis magna eget, accumsan ipsum. Nullam pretium velit turpis, et interdum elit lacinia ut. Donec volutpat turpis sit amet sodales tristique. Cras aliquam mauris tempus dolor hendrerit, aliquet aliquam augue elementum. Vestibulum dignissim dapibus ex, non tempus nulla suscipit vel. Ut quis nulla vestibulum, elementum sem id, ornare orci.</p> 
+            </div>
           </div>
-          <div class="large-6 small-12 columns">
+          <div class="person person4 large-6 small-12 columns">
             <img class="center" src="http://placehold.it/300"></img>
             <h2>Team Role</h2>
             <p>Gravida dis placerat lectus ante vel nunc euismod eget ornare varius gravida euismod lorem ipsum dolor sit amet consequat </p>
+            <div class="person-description">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut felis augue. Curabitur at finibus lorem. Nullam tellus neque, porta non odio et, cursus sollicitudin ex. Curabitur in elementum velit, interdum euismod velit. Donec bibendum condimentum eros, ornare convallis ante consectetur sed. Nunc eu mauris tincidunt, auctor arcu faucibus, semper purus. Ut nec orci accumsan, facilisis magna eget, accumsan ipsum. Nullam pretium velit turpis, et interdum elit lacinia ut. Donec volutpat turpis sit amet sodales tristique.</p>
+              <p>Cras aliquam mauris tempus dolor hendrerit, aliquet aliquam augue elementum. Vestibulum dignissim dapibus ex, non tempus nulla suscipit vel. Ut quis nulla vestibulum, elementum sem id, ornare orci.</p> 
+            </div>
           </div>
         </div>
       </div>
@@ -73,6 +88,19 @@ title:
   </div>
 </div>
 <script>
+  var team = document.getElementsByClassName("person");
+  for (var i=0; i < team.length; i++) {
+    var member = team[i];
+    member.onclick = function() {
+      var description = this.getElementsByClassName("person-description")[0];
+      var display = window.getComputedStyle(description, null).getPropertyValue("display");
+      if (display == "none") {
+        description.style.display = "block";
+      } else {
+        description.style.display = "none";
+      }
+    }
+  }
   window.onscroll = function() {
     var element = document.getElementById("the-facts");
     var elementHeight = element.offsetHeight;
@@ -97,9 +125,6 @@ title:
     var screenHeight = window.screen.height;
     if (scrollY > ( elementY - screenHeight + 150) && scrollY < (elementY + elementHeight)) {
       var appear = (elementY - scrollY + 220)/(screenHeight);
-      console.log(elementY);
-      console.log(scrollY);
-      console.log(appear);
       element.style.opacity = 1 - appear;
     }
   }
